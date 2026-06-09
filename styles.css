@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Segoe UI, Arial, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background: #f5f7fa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+    padding: 60px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+header h2 {
+    color: #cbd5e1;
+    margin-top: 10px;
+}
+
+.tagline {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.contact {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section h2 {
+    margin-bottom: 25px;
+    color: #1e3a8a;
+}
+
+.dark {
+    background: white;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.skills-grid div {
+    background: #1e3a8a;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.job {
+    background: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.job h3 {
+    color: #1e3a8a;
+}
+
+.job ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.certs,
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.certs div {
+    background: #1e3a8a;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 768px) {
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .contact {
+        justify-content: center;
+    }
+}
