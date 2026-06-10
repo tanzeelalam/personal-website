@@ -8,6 +8,6 @@ terraform {
     region = "us-east-1"
     key = "github-actions/terraform.tfstate"
     encrypt = true
-    use_lockfile = "terraform-resources-personal-website"
+    use_lockfile = true
   }
 }
