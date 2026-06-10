@@ -18,11 +18,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.IAM_ROLE }}
-          aws-region: ${{ secrets.AWS_REGION }}
-      
-      - name: Show ARN
-        run: |
-          aws sts get-caller-identity --query Arn --output text
+          aws-region: ${{ secrets.AWS_REGION }}      
       
       - name: List S3 Buckets
         env:
