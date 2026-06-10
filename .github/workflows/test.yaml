@@ -20,6 +20,10 @@ jobs:
           role-to-assume: ${{ secrets.IAM_ROLE }}
           aws-region: ${{ secrets.AWS_REGION }}
       
+      - name: Show ARN
+        run: |
+          aws sts get-caller-identity --query Arn --output text
+      
       - name: List S3 Buckets
         env:
           AWS_REGION: ${{ secrets.AWS_REGION }}
