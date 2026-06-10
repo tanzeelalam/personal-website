@@ -18,6 +18,7 @@ resource "aws_s3_bucket_public_access_block" "static_site_access" {
 }
 
 resource "aws_s3_bucket_policy" "static_site_policy" {
+  depends_on = [ aws_s3_bucket_public_access_block.static_site_access ]
   bucket = aws_s3_bucket.static_site.id
   policy = jsonencode({
     Version = "2012-10-17"
@@ -26,10 +27,8 @@ resource "aws_s3_bucket_policy" "static_site_policy" {
         Effect = "Allow"
         Principal = "*"
         Action = "s3:GetObject"
-        Resource = "${ aws_s3_bucket.static_site.arn}/*"
+        Resource = "${ aws_s3_bucket.static_site.arn }/*"
       }
     ]
-  })
-
-  depends_on = [ aws_s3_bucket_public_access_block.static_site_access ]
+  })  
 }
