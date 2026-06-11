@@ -86,7 +86,7 @@ data "aws_iam_policy_document" "cloudfront_access" {
     ]
 
     resources = [
-      "${aws_s3_bucket.website.arn}/*"
+      "${aws_s3_bucket.static_site.arn}/*"
     ]
 
     principals {
