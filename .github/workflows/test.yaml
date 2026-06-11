@@ -1,4 +1,4 @@
-name: Create an S3 Bucket
+name: Create a personal website using s3 and cloudfront distribution
 
 on:
   push:
